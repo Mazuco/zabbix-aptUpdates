@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Autor: Vitor Mazuco
+# Autor: Waderni Lotfi/Vitor Mazuco
 # Descrição: Monitora os repositorios de seu Linux
-#
+# Modificado em: 24/03/2018
 #
 ZBX_HOSTNAMEITEM_PRESENT=$(egrep ^HostnameItem /etc/zabbix/zabbix_agentd.conf -c)
 #echo $ZBX_HOSTNAMEITEM_PRESENT
