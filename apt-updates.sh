@@ -2,7 +2,7 @@
 # Autor: Waderni Lotfi/Vitor Mazuco
 # Descrição: Monitora os repositorios de seu Linux
 # Modificado em: 24/03/2018
-#
+
 ZBX_HOSTNAMEITEM_PRESENT=$(egrep ^HostnameItem /etc/zabbix/zabbix_agentd.conf -c)
 #echo $ZBX_HOSTNAMEITEM_PRESENT
 if [ "$ZBX_HOSTNAMEITEM_PRESENT" -ge "1" ]; then
@@ -14,7 +14,7 @@ else
 fi
 #echo $ZBX_HOSTNAME;
 
-
+# Essa parte, serve para pegar as quantidades de atualizações de segurança e os regulares.
 UPDATES=$(/usr/lib/update-notifier/apt-check 2>&1||echo "-1,-1")
 echo -n '"'$ZBX_HOSTNAME'"' 'apt.security '
 echo $UPDATES|cut -d';' -f2
